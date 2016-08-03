@@ -1,0 +1,29 @@
+body {
+    text-align: right;
+}
+
+#title-text {
+    font-family: 'Bungee Hairline', cursive;
+    color: red;
+    opacity:0.9;
+    font-size: 4.5em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    position:absolute;
+    text-align: left;
+    width: 100%;
+    top:25%;
+    left:5%;
+}
+
+#time {
+    font-family: 'Bungee Hairline', cursive;
+    color: red;
+    font-size: 3em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    position:absolute;
+    text-align: left;
+    width: 100%;
+    opacity:1;
+    top:3%;
+    left:5%;
+}

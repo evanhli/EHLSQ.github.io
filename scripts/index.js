@@ -1,12 +1,6 @@
-var aboutButton;
 $(document).ready( function () {
   $(".block").hide();
-  $(".about").hide();
-  aboutButton = document.getElementById("aboutButton");
-  aboutButton.onclick = displayAbout;
 });
-
-
 
 
 $(function(){
@@ -24,10 +18,4 @@ function displayBody() {
     $(".block").fadeIn ( 800, function () {
 
     });
-}
-
-function displayAbout() {
-  $(".about").fadeIn( 800, function () {
-
-  })
 }

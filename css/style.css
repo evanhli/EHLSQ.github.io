@@ -6,6 +6,10 @@ html, body {
     height: 100%;
 }
 
+body {
+  padding-bottom: 20px;
+}
+
 .title {
   font-size: 65px;
   font-family: 'Inconsolata';

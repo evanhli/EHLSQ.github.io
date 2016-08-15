@@ -4,20 +4,23 @@
 
 html, body {
     height: 100%;
-    margin-bottom: 0;
 }
 
 body {
+  background-color:#EFEEEE;
   padding-bottom: 20px;
 }
 
 .title {
-  font-size: 65px;
+  font-size: 5em;
   font-family: 'Inconsolata';
 }
 
 .block {
-  font-size: 45px;
+  height:100%;
+  width:100%;
+  position:relative;
+  font-size: 3em;
   font-family: 'Inconsolata';
 }
 
@@ -43,7 +46,7 @@ li {
 }
 
 p {
-  font-size:20px;
+  font-size:2em;
 }
 
 button:focus {
@@ -61,11 +64,4 @@ button.aboutButton {
   display:inline-block;
   height: 600px;
   width: 100%;
-}
-
-.typed-cursor{
-    font-size: 65px;
-    top:30%;
-    position:relative;
-    opacity: 1;
 }

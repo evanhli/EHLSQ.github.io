@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Latest compiled and minified CSS -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<!-- Optional theme -->
-    <link href='https://fonts.googleapis.com/css?family=Bungee+Hairline' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-<!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script type='text/javascript' src='./scripts/app.js'></script>
 
-    <meta charset="UTF-8">
-    <title>Evan Li</title>
-  </head>
+    <script src="./scripts/typed.js-master/js/typed.js"></script>
+    <script src="./scripts/index.js"></script>
 
+    <body>
 
-  <body>
-
-    <div ng-app="myApp" ng-controller="myCtrl">
-      <div style="background:black">
-        <img src="./images/sf.jpg" width="100%"style="opacity:0.7">
+      <div style="width:100%; margin:0 auto; height:300px; text-align:center; background-color:#EFEEEE;" >
+          <div class="title" style="display:inline; top:10%; position:relative;"></div>
       </div>
-      <div id="time"></div>
-      <div id="title-text">Evan</div>
-    </div>
 
-  </body>
+      <div style="width:100%; margin 0 auto; height: 500px; text-align:left; background-color:#EFEEEE">
+          <div class="block" style="top:15%; padding:15px;">
+            <ul>
+              <li>
+                <button class="aboutButton" id="aboutButton">About</button>
+                <p class="about">
+                  I'm a junior at <a href="www.ncsu.edu">NCSU</a> interested in web development, UX, and data visualization.
+
+                </p>
+              </li>
+              <li>
+                Projects
+              </li>
+            </ul>
+
+
+          </div>
+      </div>
+
+      <!-- <div style="width:100%; margin 0 auto; height: 500px; text-align:left; background-color:#EFEEEE"> </div> -->
+
+
+
+    </body>
+
 
 </html>

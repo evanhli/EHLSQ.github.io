@@ -7,6 +7,7 @@ $(document).ready( function () {
 $(function(){
     $(".title").typed({
       strings: ["Evan ^100L^40i<br>NCSU CS 2018",  ],
+      // strings: ["abcde",  ],
       typeSpeed: 0,
       showCursor: false,
       callback: function () {

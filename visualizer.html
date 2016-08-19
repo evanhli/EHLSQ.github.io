@@ -13,16 +13,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="./css/visualizer.css" />
 
   </head>
 
   <body>
 
-    <form id="inputURL">
-        <input type="text" id="myText" value="Enter a soundcloud URL here">
-    </form>
+    <div>
+      <form id="inputURL">
+          <input type="text" id="myText" value="Enter a soundcloud URL">
+      </form>
+    </div>
 
-    <audio id="player" controls="" autoplay="" preload autobuffer></audio>
+
+
+    <audio id="player" autoplay preload autobuffer></audio>
+
+    <canvas class="visualizer" width="1000px" height="420px"></canvas>
 
   </body>
 

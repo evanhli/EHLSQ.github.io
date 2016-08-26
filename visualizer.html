@@ -19,9 +19,9 @@
 
   <body>
 
-    <div>
-      <form id="inputURL">
-          <input type="text" id="myText" value="Enter a soundcloud URL">
+    <div style="margin:0 auto;">
+      <form id="inputURL" style="position:absolute;">
+          <input type="text" id="myText" placeholder="Enter a soundcloud URL" value="https://soundcloud.com/joeypecoraro/warm">
       </form>
     </div>
 
@@ -29,7 +29,9 @@
 
     <audio id="player" autoplay preload autobuffer></audio>
 
-    <canvas class="visualizer" width="1000px" height="420px"></canvas>
+    <!-- <canvas class="visualizer" width="900px" height="400px"></canvas> -->
+    <canvas class="visualizer" style="width:100%; height:100%; margin:0px;"></canvas>
+
 
   </body>
 

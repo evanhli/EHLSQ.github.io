@@ -21,12 +21,12 @@ window.onload = function init () {
   canvas = document.querySelector('.visualizer');
   canvasCtx = canvas.getContext("2d");
 
-
   var audioSource = new SoundCloudAudioSource(player);
 
 }
 
 var SoundCloudAudioSource = function ( player ) {
+
   var audioCtx = new (window.AudioContext || window.webkitAudioContext);
   var analyser = audioCtx.createAnalyser();
   analyser.fftSize = 256;
@@ -36,31 +36,29 @@ var SoundCloudAudioSource = function ( player ) {
 
   var streamData = new Uint8Array(128);
 
-  // setInterval(function () {
-  //   analyser.getByteFrequencyData(streamData);
-  //   console.log(streamData);
-  //
-  // }, 20)
-
   function draw() {
+    canvasCtx.canvas.width  = window.innerWidth;
+    canvasCtx.canvas.height = window.innerHeight;
     drawVisual = requestAnimationFrame(draw);
 
     analyser.getByteFrequencyData(streamData);
     var bufferLength = analyser.frequencyBinCount;
 
+
     canvasCtx.fillStyle = 'rgb(0, 0, 0)';
     canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
-    var barWidth = (canvas.width / bufferLength) * 4;
+    var barWidth = (canvas.width / bufferLength) * 2.5;
     var barHeight;
     var x = 0;
 
-    for(var i = 0; i < bufferLength; i+=3) {
+    for(var i = 2; i < bufferLength; i+= 2) {
+      barHeight = streamData[i];
 
-      barHeight = Math.pow(streamData[i],1);
+      var renderHeight = Math.pow(streamData[i], 1.13);
 
       canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ', ' + (barHeight) + ' , 0 )';
-      canvasCtx.fillRect(x, canvas.height-barHeight/2, barWidth, barHeight * 5);
+      canvasCtx.fillRect(x, canvas.height-renderHeight/2, barWidth, renderHeight);
 
       x += barWidth + 1;
     }

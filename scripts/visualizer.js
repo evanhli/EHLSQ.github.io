@@ -4,18 +4,11 @@ var loader;
 var canvas;
 var canvasCtx;
 
-$( "form" ).submit(function( event ) {
-  var input = document.getElementById('myText');
-  var track_url = input.value;
-  loader = new SoundCloudLoader(player, track_url);
-
-  event.preventDefault();
-
-});
-
 window.onload = function init () {
 
-  var player =  document.getElementById('player');
+  var player = document.getElementById('player');
+  var playButton = document.getElementById('playButton');
+
   player.crossOrigin = "anonymous";
 
   canvas = document.querySelector('.visualizer');
@@ -24,6 +17,18 @@ window.onload = function init () {
   var audioSource = new SoundCloudAudioSource(player);
 
 }
+
+$( "form" ).submit(function( event ) {
+  var input = document.getElementById('myText');
+  var track_url = input.value;
+  loader = new SoundCloudLoader(player, track_url);
+
+  event.preventDefault();
+});
+
+$( "#playButton" ).click(function() {
+  $("form").submit();
+});
 
 var SoundCloudAudioSource = function ( player ) {
 

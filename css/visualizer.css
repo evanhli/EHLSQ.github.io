@@ -19,3 +19,16 @@ canvas {
   border:5px solid #111;
   border-radius:5px;
 }
+
+span.glyphicon {
+    font-size: 2em;
+}
+
+#playButton {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
